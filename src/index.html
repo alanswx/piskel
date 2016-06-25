@@ -23,6 +23,55 @@
       <span style="top:45%">Loading Piskel ...</span>
   </div>
 
+
+  <script type="text/javascript">
+function loadjscssfile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+  var filename = 'load';
+  loadjscssfile(filename, 'js');
+if (0)
+{
+    window.pskl = window.pskl || {};
+    window.pskl.appEngineToken_ = false;
+
+      window.pskl.appEnginePiskelData_ = {
+        piskel : null,
+        isLoggedIn : true,
+        fps : 12,
+        descriptor : {
+          name : "New piskel",
+          description : "",
+          isPublic : true
+        }
+      };
+}
+
+  </script>
+
+
+
   <style type="text/css">
     #main-wrapper {
       margin-top: 40px;
