@@ -51,6 +51,8 @@ var Constants = {
 
   // SERVICE URLS
   APPENGINE_SAVE_URL : 'save',
-  IMAGE_SERVICE_UPLOAD_URL : 'http://piskel-imgstore-b.appspot.com/__/upload',
-  IMAGE_SERVICE_GET_URL : 'http://piskel-imgstore-b.appspot.com/img/'
+  //IMAGE_SERVICE_UPLOAD_URL : 'http://piskel-imgstore-b.appspot.com/__/upload',
+  //IMAGE_SERVICE_GET_URL : 'http://piskel-imgstore-b.appspot.com/img/'
+  IMAGE_SERVICE_UPLOAD_URL : 'upload',
+  IMAGE_SERVICE_GET_URL : 'gif'
 };
